@@ -4,9 +4,27 @@
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 const playButtonEl = document.getElementById("play-button");
+const gridEl = document.getElementById("grid");
+const numberCells = 100;
+
+/**
+ * Generate a grid with n cells
+ * @param {number} numberCells 
+ */
+function generateCells(numberCells) {
+   for (let i = 0; i < numberCells; i++) {
+      const cell = document.createElement("div");
+      cell.classList.add("cell");
+      cell.innerHTML = i + 1;
+      gridEl.append(cell);   
+   }
+}
 
 playButtonEl.addEventListener("click", function(e){
-   console.log("Ciao");
+   generateCells(numberCells);
 
    e.preventDefault();
 })
+
+
+

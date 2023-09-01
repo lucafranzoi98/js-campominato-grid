@@ -7,10 +7,6 @@ const playButtonEl = document.getElementById("play-button");
 const gridEl = document.getElementById("grid");
 const numberCells = 100;
 
-function toggleCells(cell) {
-   
-}
-
 /**
  * Generate a grid with n cells
  * @param {number} numberCells 

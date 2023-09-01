@@ -7,6 +7,10 @@ const playButtonEl = document.getElementById("play-button");
 const gridEl = document.getElementById("grid");
 const numberCells = 100;
 
+function toggleCells(cell) {
+   
+}
+
 /**
  * Generate a grid with n cells
  * @param {number} numberCells 
@@ -16,7 +20,12 @@ function generateCells(numberCells) {
       const cell = document.createElement("div");
       cell.classList.add("cell");
       cell.innerHTML = i + 1;
-      gridEl.append(cell);   
+      gridEl.append(cell);
+
+      cell.addEventListener("click", function(){
+         this.classList.toggle("bg-click");
+         console.log(cell.innerHTML);
+      });
    }
 }
 
